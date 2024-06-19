@@ -34,7 +34,8 @@ namespace Ex03.GarageLogic.InnerVehicleMembers
         {
             StringBuilder fuelEngineInformation = new StringBuilder(); 
 
-            fuelEngineInformation.AppendFormat("Engine type: Fuel, with fuel type {0}{3}Maximum tank size: {1} liters{3}Fuel Currently in the tank: {2} liters{3}",
+            fuelEngineInformation.AppendFormat("Engine type: Fuel, with fuel type {0}{3}" +
+                "Maximum tank size: {1} liters{3}Fuel Currently in the tank: {2} liters{3}",
                 m_EnergyType.ToString() ,r_MaxEnergyCapacity, m_CurrentEnergyAmount, Environment.NewLine);
 
             return fuelEngineInformation.ToString();

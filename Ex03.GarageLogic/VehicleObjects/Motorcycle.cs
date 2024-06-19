@@ -108,7 +108,8 @@ namespace Ex03.GarageLogic.VehicleObjects
             StringBuilder motorcycleInfoBuilder = new StringBuilder();
 
             motorcycleInfoBuilder.Append(base.ToString());
-            motorcycleInfoBuilder.AppendFormat("A Motorcycle:{2}License type: {0}{2}Engine volume: {1} square meters{2}", m_MotorCycleLicenseType.ToString(), m_EngineVolume.ToString(), Environment.NewLine);
+            motorcycleInfoBuilder.AppendFormat("A Motorcycle:{2}License type: {0}{2}Engine volume: {1} square meters{2}", 
+                m_MotorCycleLicenseType.ToString(), m_EngineVolume.ToString(), Environment.NewLine);
 
             return motorcycleInfoBuilder.ToString();
         }

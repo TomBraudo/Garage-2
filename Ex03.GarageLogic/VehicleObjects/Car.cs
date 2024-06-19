@@ -99,7 +99,8 @@ namespace Ex03.GarageLogic.VehicleObjects
             StringBuilder carInfoBuilder = new StringBuilder();
 
             carInfoBuilder.Append(base.ToString());
-            carInfoBuilder.AppendFormat("A car:{2}Color: {0}{2}Doors number: {1}{2}", m_ColorTypeForRegularCar.ToString(), ((int)m_AmountOfDoors).ToString(), Environment.NewLine);
+            carInfoBuilder.AppendFormat("A car:{2}Color: {0}{2}Doors number: {1}{2}", 
+                m_ColorTypeForRegularCar.ToString(), ((int)m_AmountOfDoors).ToString(), Environment.NewLine);
 
             return carInfoBuilder.ToString();
         }

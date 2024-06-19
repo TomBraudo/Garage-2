@@ -63,7 +63,8 @@ namespace Ex03.GarageLogic.VehicleObjects
         {
             StringBuilder stringToReturn = new StringBuilder();
 
-            stringToReturn.AppendFormat("Model name: {0} License number: {1} has {2} wheels:{3}", m_ModelName, m_LicenseNumber, m_ListOfWheels.Count, Environment.NewLine);
+            stringToReturn.AppendFormat("Model name: {0} License number: {1} has {2} wheels:{3}", 
+                m_ModelName, m_LicenseNumber, m_ListOfWheels.Count, Environment.NewLine);
             int i = 0;
 
             foreach (Wheel wheel in this.m_ListOfWheels)
@@ -72,7 +73,8 @@ namespace Ex03.GarageLogic.VehicleObjects
                 stringToReturn.AppendFormat("Wheel no.{0}: {1}", i, wheel.ToString());
             }
 
-            stringToReturn.AppendFormat("Engine info:{1}{0}{1}{2} percent of energy left{1}", m_Engine.ToString(), Environment.NewLine, m_EnergyLeftPercentage);
+            stringToReturn.AppendFormat("Engine info:{1}{0}{2} percent of energy left{1}", 
+                m_Engine.ToString(), Environment.NewLine, m_EnergyLeftPercentage);
 
             return stringToReturn.ToString();
         }

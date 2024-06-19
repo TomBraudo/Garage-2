@@ -40,7 +40,8 @@ namespace Ex03.GarageLogic.InnerVehicleMembers
         {
             StringBuilder electricEngineInformation = new StringBuilder();
 
-            electricEngineInformation.AppendFormat("Engine Type: Electric{2} Maximum Battery Lifetime: {0} hours{2}Current Battery Lifetime left: {1} hours{2}",
+            electricEngineInformation.AppendFormat("Engine Type: Electric{2} Maximum Battery Lifetime: {0} hours{2}" +
+                "Current Battery Lifetime left: {1} hours{2}",
                 r_MaxEnergyCapacity, m_CurrentEnergyAmount, Environment.NewLine);
 
             return electricEngineInformation.ToString();

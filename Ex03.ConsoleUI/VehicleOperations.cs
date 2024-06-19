@@ -51,7 +51,8 @@ namespace Ex03.ConsoleUI
             {
                 try
                 {
-                    float energyAmount = getValidFloatInput("Enter the amount of energy currently in the vehicle (minutes for electric engine, liters for fuel based engine):");
+                    float energyAmount = getValidFloatInput("Enter the amount of energy currently in the vehicle " +
+                                                            "(minutes for electric engine, liters for fuel based engine):");
                     r_Garage.SetInitialEnergy(energyAmount);
                     validInput = true;
                 }
@@ -379,7 +380,7 @@ namespace Ex03.ConsoleUI
             {
                 try
                 {
-                    Console.WriteLine("Please choose the {0} from the following options:", enumTypeName);
+                    Console.WriteLine(string.Format("Please choose the {0} from the following options:", enumTypeName));
                     Console.WriteLine(EnumHelper.GetEnumDescriptions(typeof(TEnum)));
                     result = EnumHelper.Parse<TEnum>(Console.ReadLine());
                     validInput = true;
