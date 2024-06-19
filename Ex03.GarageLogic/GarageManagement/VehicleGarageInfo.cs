@@ -3,7 +3,6 @@ using Ex03.GarageLogic.VehicleObjects;
 using System;
 using System.Text;
 
-
 namespace Ex03.GarageLogic.GarageManagement
 {
     internal class VehicleGarageInfo

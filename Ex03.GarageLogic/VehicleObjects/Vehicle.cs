@@ -72,8 +72,7 @@ namespace Ex03.GarageLogic.VehicleObjects
                 stringToReturn.AppendFormat("Wheel no.{0}: {1}", i, wheel.ToString());
             }
 
-            stringToReturn.AppendFormat("Engine info:{1}{0}", m_Engine.ToString(), Environment.NewLine);
-            stringToReturn.AppendFormat("{0} percent of energy left{1}", m_EnergyLeftPercentage, Environment.NewLine);
+            stringToReturn.AppendFormat("Engine info:{1}{0}{1}{2} percent of energy left{1}", m_Engine.ToString(), Environment.NewLine, m_EnergyLeftPercentage);
 
             return stringToReturn.ToString();
         }
