@@ -5,15 +5,15 @@ namespace Ex03.GarageLogic.Exceptions
 {
     public class ValueOutOfRangeException : Exception
     {
-        private float m_MaxValue;
-        private float m_MinValue;
-        private string m_ObjectType;
+        private readonly float r_MaxValue;
+        private readonly float r_MinValue;
+        private readonly string r_ObjectType;
 
         public ValueOutOfRangeException(string i_ErrorMessage, string i_ObjectType, float i_MaxValue, float i_MinValue) : base(i_ErrorMessage)
         {
-            m_MaxValue = i_MaxValue;
-            m_MinValue = i_MinValue;
-            m_ObjectType = i_ObjectType;
+            r_MaxValue = i_MaxValue;
+            r_MinValue = i_MinValue;
+            r_ObjectType = i_ObjectType;
         }
 
         public override string ToString()

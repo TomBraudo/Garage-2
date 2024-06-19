@@ -97,16 +97,18 @@ namespace Ex03.ConsoleUI
         private void printMenu()
         {
             Console.Clear();
-            Console.WriteLine("Garage Management System");
-            Console.WriteLine("1. Put a new car in the garage");
-            Console.WriteLine("2. Show the list of license numbers");
-            Console.WriteLine("3. Change the status of a vehicle");
-            Console.WriteLine("4. Inflate vehicle tires to maximum");
-            Console.WriteLine("5. Refuel a fuel-driven vehicle");
-            Console.WriteLine("6. Charge an electric vehicle");
-            Console.WriteLine("7. Display complete vehicle data");
-            Console.WriteLine("8. Exit");
-            Console.Write("Choose an option: ");
+            string menu = @"
+Garage Management System
+1. Put a new car in the garage
+2. Show the list of license numbers
+3. Change the status of a vehicle
+4. Inflate vehicle tires to maximum
+5. Refuel a fuel-driven vehicle
+6. Charge an electric vehicle
+7. Display complete vehicle data
+8. Exit
+Choose an option: ";
+            Console.Write(menu);
         }
     }
 }
