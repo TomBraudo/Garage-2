@@ -9,13 +9,8 @@ namespace Ex03.GarageLogic.GarageManagement
 {
     public class GarageManager
     {
-        private Dictionary<string, VehicleGarageInfo> m_Vehicles;
+        private Dictionary<string, VehicleGarageInfo> m_Vehicles = new Dictionary<string, VehicleGarageInfo>();
         private VehicleGarageInfo m_CurrentVehicleInfoToInsert;
-
-        public GarageManager()
-        {
-            m_Vehicles = new Dictionary<string, VehicleGarageInfo>();
-        }
 
         public bool IsVehicleInGarage(string i_LicenceNumber)
         {
@@ -59,11 +54,11 @@ namespace Ex03.GarageLogic.GarageManagement
             return m_Vehicles.Keys.ToList();
         }
 
-        public void ChangeVehicleStatus(string m_LicenseNumber, VehicleStatuses.eVehicleStatus i_Status) 
+        public void ChangeVehicleStatus(string i_LicenseNumber, VehicleStatuses.eVehicleStatus i_Status) 
         {
-            if (m_Vehicles.ContainsKey(m_LicenseNumber))
+            if (m_Vehicles.ContainsKey(i_LicenseNumber))
             {
-                m_Vehicles[m_LicenseNumber].VehicleStatus = i_Status; 
+                m_Vehicles[i_LicenseNumber].VehicleStatus = i_Status; 
             }
             else
             {
@@ -71,11 +66,11 @@ namespace Ex03.GarageLogic.GarageManagement
             }
         }
 
-        public void FillAirInWheelsToMax(string m_LicenseNumber)
+        public void FillAirInWheelsToMax(string i_LicenseNumber)
         {
-            if (m_Vehicles.ContainsKey(m_LicenseNumber))
+            if (m_Vehicles.ContainsKey(i_LicenseNumber))
             {
-                Vehicle currentVehicle = m_Vehicles[m_LicenseNumber].Vehicle;
+                Vehicle currentVehicle = m_Vehicles[i_LicenseNumber].Vehicle;
 
                 currentVehicle.FillAirPressureToMax();
             }
