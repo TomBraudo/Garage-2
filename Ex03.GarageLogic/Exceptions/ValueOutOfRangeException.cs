@@ -21,7 +21,7 @@ namespace Ex03.GarageLogic.Exceptions
             StringBuilder errorMessageBuilder = new StringBuilder();
 
             errorMessageBuilder.AppendFormat("Illegal action on a {0}{1}{2}{1}Legal values are: {3} - {4}{1}", 
-                m_ObjectType, Environment.NewLine, Message, m_MinValue, m_MaxValue);
+                r_ObjectType, Environment.NewLine, Message, r_MinValue, r_MaxValue);
 
             return errorMessageBuilder.ToString();
         }
